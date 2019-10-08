@@ -1,0 +1,270 @@
+.index {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.index .index-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.index .index-bg video {
+  position: absolute;
+  height: 100%;
+}
+
+.index .index-home {
+  position: relative;
+  height: 100%;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.index .index-home .index-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.index .index-home .index-logo .index-logo-box {
+  margin: 0 auto;
+  width: 1290px;
+}
+
+.index .index-home .index-logo .index-logo-box img {
+  width: 100%;
+  transform: translateY(-352px);
+}
+
+.index .index-home .index-nav {
+  position: absolute;
+  width: 2225px;
+  height: 670px;
+  bottom: 0;
+  z-index: 3;
+  left: 50%;
+  margin-left: -1112.5px;
+}
+
+.index .index-home .index-nav .index-nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.index .index-home .index-nav .index-nav-item .nav-btn {
+  display: block;
+  height: 162px;
+}
+
+.index .index-home .index-nav .index-nav-item .nav-btn img {
+  height: 100%;
+}
+
+.index .index-home .index-nav .index-out-mid {
+  width: 85px;
+}
+
+.index .index-home.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.index .index-home.active .index-nav .index-nav-left,
+.index .index-home.active .index-nav .index-nav-right {
+  transition-duration: 600ms;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.index .index-edit {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+}
+
+.index .edit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.index .edit.active {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.index .edit.active .edit-box {
+  transition-duration: 600ms;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.index .edit.active .edit-handle {
+  transition-duration: 600ms;
+  opacity: 1;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.index .edit .edit-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1290px;
+}
+
+.index .edit .edit-logo img {
+  width: 100%;
+  transform: translate(302px, -400px);
+}
+
+.index .edit .edit-box {
+  position: absolute;
+  width: 2222px;
+  left: 50%;
+  bottom: 211px;
+  margin-left: -1111px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 40, 0);
+}
+
+.index .edit .edit-box .edit-box-bg {
+  width: 100%;
+}
+
+.index .edit .edit-box .edit-box-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 40px;
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-left {
+  width: 420px;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, -40, 0);
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-left img {
+  max-width: 100%;
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-left img.item-logo {
+  width: 294px;
+  margin: 0 auto 40px;
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-mid {
+  width: 970px;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, -40);
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-mid img {
+  width: 100%;
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-right {
+  width: 670px;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 40, 0);
+}
+
+.index .edit .edit-box .edit-box-cont .edit-box-right img {
+  width: 100%;
+}
+
+.index .edit .edit-box .edit-box-cont.active .edit-box-left,
+.index .edit .edit-box .edit-box-cont.active .edit-box-mid,
+.index .edit .edit-box .edit-box-cont.active .edit-box-right {
+  opacity: 1;
+  transition-duration: 600ms;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.index .edit .edit-handle {
+  position: absolute;
+  width: 1024px;
+  height: 144px;
+  left: 50%;
+  margin-left: -512px;
+  bottom: 30px;
+  opacity: 0;
+  transform: matrix(1, 0, 0, 1, 0, 40);
+}
+
+.index .edit .edit-handle .return-btn {
+  position: absolute;
+  width: 144px;
+  left: -211px;
+  top: 38px;
+}
+
+.index .edit .edit-handle .return-btn img {
+  width: 100%;
+}
+
+.index .edit .edit-handle .btns-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.index .edit .edit-handle .wrapper {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 72px;
+}
+
+.index .edit .edit-handle .wrapper .content {
+  width: 2704px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.index .edit .edit-handle .wrapper .content .item {
+  flex-shrink: 0;
+  flex-grow: 0;
+  height: 130px;
+  margin: 0 20px;
+}
+
+.index .edit .edit-handle .wrapper .content .item img {
+  height: 100%;
+}

@@ -1,0 +1,168 @@
+.click {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  transform: matrix(0.9, 0, 0, 0.9, 0, 0);
+}
+
+.click.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-duration: 600ms;
+}
+
+.click .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.click .box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.click .box .head {
+  position: absolute;
+  width: 1360px;
+  top: 0;
+  left: 50%;
+  margin-left: -680px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.click .box .head .title {
+  width: 827px;
+  transform: translateY(-354px);
+}
+
+.click .box .head .desc {
+  position: absolute;
+  top: 195px;
+  max-width: 100%;
+}
+
+.click .box .cont {
+  position: absolute;
+  top: 312px;
+  width: 2830px;
+  min-height: 741px;
+  left: 50%;
+  margin-left: -1415px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.click .box .cont img {
+  width: 100%;
+}
+
+.click .box .cont .one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.click .box .cont .one.one1 {
+  transform: matrix(1, 0, 0, 1, 60, 0);
+}
+
+.click .box .cont .one.one1.active {
+  animation: animate2 600ms linear forwards;
+}
+
+.click .box .cont .one.one2 {
+  transform: matrix(1, 0, 0, 1, -60, 0);
+}
+
+.click .box .cont .one.one2.active {
+  animation: animate1 600ms linear forwards;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 60, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, -60, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+}
+
+.click .box .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 480px;
+  height: 200px;
+  margin-left: -240px;
+  overflow: hidden;
+}
+
+.click .box .bottom img {
+  width: 100%;
+}
+
+.click .box .bottom .btn-1 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.click .box .bottom .btn-2 {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+.click .return-btn {
+  position: absolute;
+  width: 144px;
+  right: 5%;
+  bottom: 38px;
+  z-index: 4;
+}
+
+.click .return-btn img {
+  width: 100%;
+}

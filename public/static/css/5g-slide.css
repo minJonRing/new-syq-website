@@ -1,0 +1,84 @@
+.g5-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  opacity: 0;
+  pointer-events: none;
+  transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+}
+
+.g5-slide.active {
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-duration: 600ms;
+}
+
+.g5-slide .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.g5-slide .box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.g5-slide .box .box-one,
+.g5-slide .box .box-tow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: -3;
+}
+
+.g5-slide .box .box-one img,
+.g5-slide .box .box-tow img {
+  pointer-events: none;
+}
+
+.g5-slide .box .box-one.active,
+.g5-slide .box .box-tow.active {
+  z-index: 1;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.g5-slide .box .box-one.active img,
+.g5-slide .box .box-tow.active img {
+  pointer-events: auto;
+}
+
+.g5-slide .return-btn {
+  position: absolute;
+  width: 144px;
+  left: 50%;
+  margin-left: -72px;
+  bottom: 38px;
+  z-index: 4;
+}
+
+.g5-slide .return-btn img {
+  width: 100%;
+}
