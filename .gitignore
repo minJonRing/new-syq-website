@@ -2,3 +2,4 @@ public/upload
 node_modules
 public/react
 .DS_Store
+package.json
